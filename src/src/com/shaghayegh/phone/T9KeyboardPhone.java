@@ -33,8 +33,6 @@ public class T9KeyboardPhone implements HasSendButton, HasKeys{
     }
 
     public void type(String message) {
-        lastMessage = message;
-
         for(Character c: message.toLowerCase().toCharArray()){
             boolean found = false; // to prevent null or unknown chars
             for(Map.Entry<String, String> entry : t9keypad.entrySet()){
@@ -52,6 +50,8 @@ public class T9KeyboardPhone implements HasSendButton, HasKeys{
                 System.out.println("Unknown character: " + c);
             }
         }
+
+        lastMessage = message.toLowerCase().replaceAll("[^a-z ]", "");
 
     }
 }

@@ -26,14 +26,15 @@ public class QwertyKeyboardPhone implements HasSendButton, HasKeys {
     }
 
     public void type(String message){
-        lastMessage = message;// to prevent null or unknown chars
         for(Character c: message.toLowerCase().toCharArray()){
             if (validKey.contains(c)){
-                if (c.equals(' ')) clickKey("space");
+                if (c == ' ') clickKey("space");
                 else clickKey(String.valueOf(c));
             } else {
                 System.out.println("Unknown character: " + c);
             }
         }
+
+        lastMessage = message.toLowerCase().replaceAll("[^a-z ]", "");
     }
 }
