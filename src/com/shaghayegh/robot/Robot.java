@@ -1,7 +1,7 @@
-package com.org.fundamental.assignment.robot;
+package com.org.robot;
 
-import com.org.fundamental.assignment.phone.T9KeyboardPhone;
-import com.org.fundamental.assignment.phone.QwertyKeyboardPhone;
+import com.org.phone.T9KeyboardPhone;
+import com.org.phone.QwertyKeyboardPhone;
 
 public class Robot {
     T9KeyboardPhone t9KeyboardPhone = new T9KeyboardPhone();
@@ -13,6 +13,9 @@ public class Robot {
      * @param phoneType The phone to be used for sending the message
      */
     public void sendMessage(String intendedMessage, PhoneType phoneType) {
-
+        if (phoneType == PhoneType.T9) {
+            t9KeyboardPhone.type(intendedMessage);
+            t9KeyboardPhone.clickSend();
+        }
     }
 }

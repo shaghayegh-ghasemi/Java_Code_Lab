@@ -1,4 +1,4 @@
-package com.org.fundamental.assignment.robot;
+package com.org.robot;
 
 public enum PhoneType {
     T9,

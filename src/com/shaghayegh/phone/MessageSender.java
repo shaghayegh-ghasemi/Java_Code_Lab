@@ -1,4 +1,4 @@
-package com.org.fundamental.assignment.phone;
+package com.org.phone;
 
 public class MessageSender {
     public void sendMessage(String message) {

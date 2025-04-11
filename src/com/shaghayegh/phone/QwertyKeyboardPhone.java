@@ -1,4 +1,4 @@
-package com.org.fundamental.assignment.phone;
+package com.org.phone;
 
 public class QwertyKeyboardPhone implements HasSendButton, HasKeys {
     @Override

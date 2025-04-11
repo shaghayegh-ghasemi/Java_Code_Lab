@@ -1,4 +1,4 @@
-package com.org.fundamental.assignment.phone;
+package com.org.phone;
 
 public interface HasKeys {
     // The equivalent of clicking a key to type letters

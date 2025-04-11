@@ -1,4 +1,4 @@
-package com.org.fundamental.assignment.phone;
+package com.org.phone;
 
 import java.util.HashMap;
 import java.util.Map;

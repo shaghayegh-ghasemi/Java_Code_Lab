@@ -1,4 +1,4 @@
-package com.org.fundamental.assignment.phone;
+package com.org.phone;
 
 public interface HasSendButton {
     // The equivalent of hitting the send button after message is typed
