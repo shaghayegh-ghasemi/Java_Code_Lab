@@ -16,6 +16,9 @@ public class Robot {
         if (phoneType == PhoneType.T9) {
             t9KeyboardPhone.type(intendedMessage);
             t9KeyboardPhone.clickSend();
+        } else if (phoneType == PhoneType.QWERTY) {
+            qwertyKeyboardPhone.type(intendedMessage);
+            qwertyKeyboardPhone.clickSend();
         }
     }
 }

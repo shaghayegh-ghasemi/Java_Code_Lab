@@ -34,8 +34,9 @@ public class T9KeyboardPhone implements HasSendButton, HasKeys{
 
     public void type(String message) {
         lastMessage = message;
-        boolean found = false; // to prevent null or unknown chars
+
         for(Character c: message.toLowerCase().toCharArray()){
+            boolean found = false; // to prevent null or unknown chars
             for(Map.Entry<String, String> entry : t9keypad.entrySet()){
                 String button = entry.getKey();
                 String letters = entry.getValue();
@@ -47,6 +48,10 @@ public class T9KeyboardPhone implements HasSendButton, HasKeys{
                     break;
                 }
             }
+            if(!found){
+                System.out.println("Unknown character: " + c);
+            }
         }
+
     }
 }
