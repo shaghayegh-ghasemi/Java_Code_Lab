@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CSR_Report>
+    <CSR_Report_Header Report_Type="Merged Report" TimeStamp_Created="04/11/2025" Title="Merged_Licenses"/>
+    <CSR_Report_Body>
+        <CSR_Producer NIPR_Number="41581153">
+            <License License_Class="RES" License_Expiration_Date="02/01/2012" License_Issue_Date="10/01/2000" License_Number="73126" License_Status="Y" Resident_Indicator="Y" State_Code="NY"/>
+        </CSR_Producer>
+        <CSR_Producer NIPR_Number="41585823">
+            <License License_Class="Res PRT Firm" License_Expiration_Date="05/01/2021" License_Issue_Date="11/27/2005" License_Number="85512" License_Status="N" Resident_Indicator="Y" State_Code="WC"/>
+            <License License_Class="RES PRODUCER/PRODUCER FIRM" License_Expiration_Date="02/01/2022" License_Issue_Date="10/01/2001" License_Number="73146" License_Status="Y" Resident_Indicator="Y" State_Code="NV"/>
+            <License License_Class="Res Motor Club Agt/Agy" License_Expiration_Date="05/01/2014" License_Issue_Date="04/22/2002" License_Number="85590" License_Status="N" Resident_Indicator="Y" State_Code="NV"/>
+            <License License_Class="Res Motor Club Agt/Agy" License_Expiration_Date="05/27/2023" License_Issue_Date="01/22/2002" License_Number="85510" License_Status="N" Resident_Indicator="Y" State_Code="NY"/>
+        </CSR_Producer>
+        <CSR_Producer NIPR_Number="41581123">
+            <License License_Class="RES PRODUCER" License_Expiration_Date="02/01/2024" License_Issue_Date="10/01/2003" License_Number="73142" License_Status="Y" Resident_Indicator="Y" State_Code="NV"/>
+        </CSR_Producer>
+    </CSR_Report_Body>
+</CSR_Report>
