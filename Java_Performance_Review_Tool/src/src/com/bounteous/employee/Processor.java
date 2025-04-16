@@ -4,8 +4,10 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -32,11 +34,30 @@ public class Processor {
         return employees;
     }
 
+    // extract employees with performance higher than a specific rating
+    public static <T> List<Employee<T>> extractHigherRating(List<Employee<T>> employees, Double rating){
+        return employees.stream().filter(employee -> employee.getPerformanceRating() > rating)
+                .sorted(Comparator.comparing(Employee<T>::getPerformanceRating).reversed())
+                .collect(Collectors.toList());
+    }
+
+    public static <T> void write(List<Employee<T>> employees, String outputFile){
+        try(BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFile))){
+            for (Employee<T> emp : employees) {
+                writer.write(String.format("%d,%s,%.1f,%s\n",
+                                emp.getId(),
+                                emp.getName(),
+                                emp.getPerformanceRating(),
+                                emp.getDepartment())
+                        );
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    // this function prints the employee record
     public static <T> void print(List<Employee<T>> employees){
-        employees.forEach(employee -> {
-            System.out.println(
-                    employee.getId() + "," + employee.getName() + "," + employee.getPerformanceRating() + "," + employee.getDepartment()
-            );
-        });
+        employees.forEach(employee -> System.out.println(employee));
     }
 }

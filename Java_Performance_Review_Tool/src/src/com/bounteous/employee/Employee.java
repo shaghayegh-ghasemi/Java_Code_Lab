@@ -45,5 +45,13 @@ public class Employee <T> {
         this.department = department;
     }
 
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", performanceRating=" + performanceRating +
+                ", department=" + department +
+                '}';
+    }
 }
